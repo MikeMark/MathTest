@@ -7,18 +7,26 @@ grd = ""
 pyth = 1
     
 
+def nextQuest(correct):
+    if correct :
+        print "Correct!\n"
+    else:
+        print "Wrong, try again.\n"
 
 
 
 #The actual program
 #This is the first section (pythagorean theorem)
-while pyth <= 5:
+correct = False;
+while pyth <= 5 or not correct:
     pyth +=1
-    print "If a = ", + rand(0, 11), ", and b = ", + rand(0, 33), ", then what is c?"
+    my_a = rand(0, 11)
+    my_b = rand(0, 33)
+    print "\nIf a = ", + my_a, ", and b = ", + my_b, ", then what is c?"
     print "Use the pythagorean theorem."
     print ""
-    sda = float(input("Enter the length of side a: "))
-    sib = float(input("Enter the length of side b: "))
+    sda = my_a #float(input("Enter the length of side a: "))
+    sib = my_b #float(input("Enter the length of side b: "))
     print ""
     print "Thank you"
     print ""
@@ -26,18 +34,8 @@ while pyth <= 5:
     cor = sqrt(pow(sda, 2) + pow(sib, 2))
     coru = cor + 1
     corl = cor - 1
-    if ni<=coru and ni>=corl:
-        print "Correct!"
-        break
-        print ""
-        print ""
-        print ""
-    else:
-        print "Wrong, try again."
-        INC + 1
-        print ""
-        print ""
-        print ""
+    correct = (ni<=coru and ni>=corl)
+    nextQuest(correct)
 print "Now, on to functions."
 
 #the next section(not pythagorean theorem)

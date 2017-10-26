@@ -83,7 +83,10 @@ else:
 print "This is the final section of the math test."
 print "You will be given a grade on your progress in these three sections after you finsh this one."
 print ""
-print "This section is on inear and nonlinear functions. you will be assessed on your ability to properly find a linear or nonlinear function. There are 4 questions."
+print "This section is on inear and nonlinear functions. You will be assessed on your ability to properly find a linear or nonlinear function. There are 4 questions."
+print ""
+print ""
+print "Question 1: the function is b = x cubed. Is the function linear or nonlinear?"
 
 
 

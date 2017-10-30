@@ -5,13 +5,14 @@ rand = random.randint
 INC = 0
 grd = ""
 pyth = 1
-    
-
-def nextQuest(correct):
-    if correct :
+def right(correct):
+    if correct:
         print "Correct!\n"
     else:
         print "Wrong, try again.\n"
+        INC + 1
+    
+
 
 
 
@@ -22,11 +23,11 @@ while pyth <= 5 or not correct:
     pyth +=1
     my_a = rand(0, 11)
     my_b = rand(0, 33)
-    print "\nIf a = ", + my_a, ", and b = ", + my_b, ", then what is c?"
+    print "If a = ", + my_a, ", and b = ", + my_b, ", then what is c?"
     print "Use the pythagorean theorem."
     print ""
-    sda = my_a #float(input("Enter the length of side a: "))
-    sib = my_b #float(input("Enter the length of side b: "))
+    sda = my_a
+    sib = my_b
     print ""
     print "Thank you"
     print ""
@@ -34,57 +35,72 @@ while pyth <= 5 or not correct:
     cor = sqrt(pow(sda, 2) + pow(sib, 2))
     coru = cor + 1
     corl = cor - 1
-    correct = (ni<=coru and ni>=corl)
-    nextQuest(correct)
+    correct = (ni <= coru and ni >= corl)
+    right(correct)
 print "Now, on to functions."
 
 #the next section(not pythagorean theorem)
-print "If the function is y = 2x + 5, and x = ", rand(1, 20), "what is y?"
+varx = rand(1, 20)
+print "If the function is y = 2x + 5, and x = ", varx, "what is y?"
 print "There are 2 other function questions. You will be given them after this one."
-x = float(input("Enter the number you were given here:   "))
-y = (2 * x) + 5
+y = (2 * varx) + 5
 yu = y + 1
 yl = y - 1
 questOne = float(input("Enter your answer here:   "))
-if questOne <= yu and questOne >= yl:
-    print "Correct!"
-else:
-    print "Incorrect!"
-    INC + 1
-print "Next question: If the function is e = 15h, and h =", rand(10, 30),  "what is e?"
-h = float(input("Enter the number you were given here:   "))
-e = 15 * h
+correct = (questOne <= yu and questOne >= yl)
+right(correct)
+varh = rand(10, 30)
+print "Next question: If the function is e = 15h, and h =", varh,  "what is e?"
+e = 15 * varh
 eu = e + 1
 el = e - 1
 questTwo = float(input("Enter your answer here:   "))
-if questTwo <= eu and questTwo >= el:
-    print "Correct!"
-else:
-    print "Incorrect!"
-    INC + 1
-print "Next question: If the function is j = 3k + 9, and k =", rand(1, 10), "what is j?"
-k = float(input("Enter the number you were given here:   "))
-j = (3 * k) + 9
+correct = (questTwo <= eu and questTwo >= el)
+right(correct)
+vark = rand(1, 10)
+print "Next question: If the function is j = 3k + 9, and k =", vark, "what is j?"
+j = (3 * vark) + 9
 ju = j + 1
 jl = j - 1
 questThree = float(input("Enter your answer here:   "))
-if questThree <= ju and questThree >= jl:
-    print "Correct!"
-else:
-    print "Incorrect!"
-    INC + 1
+correct = (questThree <= ju and questThree >= jl)
+right(correct)
 
 
 
 
 #the third section ()
 print "This is the final section of the math test."
-print "You will be given a grade on your progress in these three sections after you finsh this one."
+print "You will be given a grade on your abilities in these three sections after you finsh this one."
 print ""
-print "This section is on inear and nonlinear functions. You will be assessed on your ability to properly find a linear or nonlinear function. There are 4 questions."
+print "This section is on multidigit multiplication. there are 4 questions. Good luck!"
 print ""
 print ""
-print "Question 1: the function is b = x cubed. Is the function linear or nonlinear?"
+allqsyea = rand(1, 2000)
+print "1.  What is ", allqsyea, "*", allqsyea, "?\n"
+qNO = 123 * 1345
+qNOu = qNO + 5
+qNOl = qNO - 5
+ansonefloat(input("Type your answer here:  "))
+correct = (ansone <= qNOu and ansone >= qNOl)
+right(correct)
+print "2.  What is ", allqsyea, "*", allqsyea, "?\n"
+qNT = 1500 * 5
+qNTu = qNT + 2
+qNTl = qNT - 2
+anstwo = float(input("Type your answer here:  "))
+correct = (anstwo <= qNTu and anstwo >= qNTl)
+right(correct)
+print "3.  What is ", allqsyea, "*", allqsyea, "?\n"
+qNTh = 550.345 * 0.0001
+qNThu = qNTh + 2
+qNThl = qNTh - 2
+ansthree = float(input("Type your answer here:  "))
+correct = (ansthree <= qNThu and ansthree >= qNThl)
+right(correct)
+print
+
+
 
 
 
@@ -102,4 +118,5 @@ elif INC <= 8:
 elif INC >= 9:
     grd = "F"
 
-print "you got", INC, "questions wrong. You get a(n)" + grd + "."
+print "You got", INC, "questions wrong.\n"
+print "Grade: " + grd

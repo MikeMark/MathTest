@@ -18,7 +18,7 @@ def right(correct):
 
 #The actual program
 #This is the first section (pythagorean theorem)
-correct = False; #this doesn't work....
+correct = False
 while pyth <= 5 or not correct:
     pyth +=1
     my_a = rand(0, 11)
@@ -76,29 +76,34 @@ print ""
 print "This section is on multidigit multiplication. there are 4 questions. Good luck!"
 print ""
 print ""
-allqsyea = rand(1, 2000)
-print "1.  What is ", allqsyea, "*", allqsyea, "?\n"
+print "1.  What is 123 * 1,345?\n"
 qNO = 123 * 1345
 qNOu = qNO + 5
 qNOl = qNO - 5
 ansonefloat(input("Type your answer here:  "))
 correct = (ansone <= qNOu and ansone >= qNOl)
 right(correct)
-print "2.  What is ", allqsyea, "*", allqsyea, "?\n"
+print "2.  What is 1,500 * 5?\n"
 qNT = 1500 * 5
 qNTu = qNT + 2
 qNTl = qNT - 2
 anstwo = float(input("Type your answer here:  "))
 correct = (anstwo <= qNTu and anstwo >= qNTl)
 right(correct)
-print "3.  What is ", allqsyea, "*", allqsyea, "?\n"
+print "3.  What is 550.345 * 0.0001?\n"
 qNTh = 550.345 * 0.0001
 qNThu = qNTh + 2
 qNThl = qNTh - 2
 ansthree = float(input("Type your answer here:  "))
 correct = (ansthree <= qNThu and ansthree >= qNThl)
 right(correct)
-print
+print "4.  What is 934 * 313?\n"
+qNF = 934 * 313
+qNFu = qNF + 3
+qNFl = qNF - 3
+ansfour = float(input("Type your answer here:  "))
+correct = (ansfour <= qNFu and ansfour >= qNFl)
+right(correct)
 
 
 
@@ -118,5 +123,5 @@ elif INC <= 8:
 elif INC >= 9:
     grd = "F"
 
-print "You got", INC, "questions wrong.\n"
+print "You got", INC, "questions wrong.\n\n\n"
 print "Grade: " + grd

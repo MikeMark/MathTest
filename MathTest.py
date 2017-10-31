@@ -18,7 +18,7 @@ def right(correct):
 
 #The actual program
 #This is the first section (pythagorean theorem)
-correct = False;
+correct = False; #this doesn't work....
 while pyth <= 5 or not correct:
     pyth +=1
     my_a = rand(0, 11)
